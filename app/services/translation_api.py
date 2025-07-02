@@ -15,7 +15,7 @@ class TranslationAPI:
         response = await self._client.post(
             url=f"/translate/{translation_type.value}/",
             json=TranslateBody(text=text).model_dump(),
-            timeout=20.0,
+            timeout=50.0,
         )
         return TranslateResponse.model_validate(response.json())
 
