@@ -3,7 +3,7 @@
 ## How to run
 - Setup .env
 ```shell
-cp .env.exmaple .env 
+cp .env.example .env 
 ```
 
 - Run docker compose
@@ -11,6 +11,6 @@ cp .env.exmaple .env
 docker compose up --build
 ```
 
-SwaggerUI - http://0.0.0.0/docs
+SwaggerUI - http://0.0.0.0:8000/docs
 
-ReDoc - http://0.0.0.0/redoc
+ReDoc - http://0.0.0.0:8000/redoc
