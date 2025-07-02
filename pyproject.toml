@@ -1,0 +1,83 @@
+[project]
+name = "test-task-docx-translator"
+version = "0.1.0"
+description = "API for translating docx files without formatting loss"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.14",
+    "httpx>=0.28.1",
+    "orjson>=3.10.18",
+    "pydantic-settings>=2.10.1",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "pre-commit>=4.2.0",
+    "ruff>=0.12.1",
+]
+
+[tool.black]
+line-length = 110
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    ".*_factory.py",
+]
+
+# Same as Black.
+line-length = 110
+
+# Assume Python 3.13
+target-version = "py313"
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+
+select = [
+    "F", # Pyflakes
+    "E", # Error
+    "E4", # Error
+    "E9", # Error
+    "I", # isort
+    "BLE", # flake8-blind-except
+    "YTT", # flake8-2020
+    "ASYNC", # flake8-async
+]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
