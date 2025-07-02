@@ -8,6 +8,8 @@ dependencies = [
     "httpx>=0.28.1",
     "orjson>=3.10.18",
     "pydantic-settings>=2.10.1",
+    "python-docx>=1.2.0",
+    "python-multipart>=0.0.20",
     "uvicorn[standard]>=0.35.0",
 ]
 
