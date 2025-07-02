@@ -2,6 +2,10 @@ from pydantic import BaseModel
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+class TranslationAPIConfig(BaseModel):
+    base_url: str
+
+
 class RunConfig(BaseModel):
     host: str = "0.0.0.0"
     port: int = 8000
@@ -30,6 +34,8 @@ class Settings(BaseSettings):
     api_title: str = "Docx Translator API"
 
     cors: CorsConfig
+
+    translation_api: TranslationAPIConfig
 
     log: LoggingConfig = LoggingConfig()
 
